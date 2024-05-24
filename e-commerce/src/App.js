@@ -1,10 +1,11 @@
 import './App.css';
-import Navigation from './customer/component/Navigation/Navigation';
+import { Carousel, Navigation } from './customer/component';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
+      <Carousel />
     </div>
   );
 }
