@@ -31,6 +31,18 @@ export const CardData = [
     {
         imageId:2,
         image:shirt2
+    },
+    {
+        imageId:3,
+        image:shirt2
+    },
+    {
+        imageId:4,
+        image:shirt2
+    },
+    {
+        imageId:5,
+        image:shirt2
     }
 ]
 

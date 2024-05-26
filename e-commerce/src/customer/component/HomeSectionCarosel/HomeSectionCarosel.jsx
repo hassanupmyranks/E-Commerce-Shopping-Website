@@ -1,20 +1,24 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import { CardData } from '../../../constant';
+import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
 
 
 const HomeSectionCarosel = () => {
-    const items = CardData.map((item) => (
-        <div key={item.imageId}>
-          <img src={item.image} alt="" />
-        </div>
-      ));
-
     const repsonsive ={
         0:{items : 1},
         720:{items: 3},
         1024:{items:5},
     };
+
+        // const items = CardData.map((item) => (
+    //     <div key={item.imageId}>
+    //       <img src={item.image} alt="" />
+    //     </div>
+    //   ));
+    const items = CardData.map((item) => (
+      <HomeSectionCard  />
+      ));
   return (
     <div>
                     <AliceCarousel
