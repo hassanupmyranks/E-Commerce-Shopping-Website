@@ -1,27 +1,33 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
+import { CarouselData } from '../../../constant';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { banner1 } from '../../../assests';
+// import { useHistory } from 'react-router-dom'; // Import useHistory hook
 
-const responsive = {
-    0: { items: banner1 },
-    568: { items: 2 },
-    1024: { items: 3 },
-};
 
-const items = [
-    <div className="item" data-value="1">1</div>,
-    <div className="item" data-value="2">2</div>,
-    <div className="item" data-value="3">3</div>,
-    <div className="item" data-value="4">4</div>,
-    <div className="item" data-value="5">5</div>,
-];
 
-export const Carousel = () => (
-    <AliceCarousel
-        mouseTracking
-        items={items}
-        responsive={responsive}
-        controlsStrategy="alternate"
-    />
-);
+const MainCarosel = () => {
+
+
+    const items = CarouselData.map((img,index)=>(
+      <div  key={img.imageId}  >
+        <img className='cursor-pointer'  src={img.image} alt="carouselImg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </div>
+    ))
+
+
+  return (
+    <div>
+            <AliceCarousel
+                mouseTracking
+                items={items}
+                disableButtonsControls
+                autoPlay
+                autoPlayInterval={2000}
+                infinite
+            />
+    </div>
+  )
+}
+
+export default MainCarosel

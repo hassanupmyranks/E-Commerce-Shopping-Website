@@ -1,6 +1,6 @@
 import Navigation from "./Navigation/Navigation";
-import { Carousel } from "./HomeCarosel/MainCarosel";
+import MainCarosel from "./HomeCarosel/MainCarosel";
 export {
     Navigation,
-    Carousel
+    MainCarosel
 };
