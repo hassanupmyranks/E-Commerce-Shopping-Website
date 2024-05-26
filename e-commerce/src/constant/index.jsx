@@ -1,4 +1,4 @@
-import { banner1, banner2, banner3, banner4, banner5 } from "../assests";
+import { banner1, banner2, banner3, banner4, banner5,shirt1,shirt2 } from "../assests";
 
 export const CarouselData = [
     {
@@ -22,3 +22,15 @@ export const CarouselData = [
         image:banner5
     }
 ]
+
+export const CardData = [
+    {
+        imageId:1,
+        image:shirt1
+    },
+    {
+        imageId:2,
+        image:shirt2
+    }
+]
+
