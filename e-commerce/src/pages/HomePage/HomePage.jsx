@@ -6,9 +6,12 @@ const HomePage = () => {
   return (
     <div>
       <MainCarosel />
-      <section>
+      <div className='p-5 flex-col justify-center' >
         <HomeSectionCarosel />
-      </section>
+        <HomeSectionCarosel />
+        <HomeSectionCarosel />
+        <HomeSectionCarosel />
+      </div>
     </div>
   )
 }
