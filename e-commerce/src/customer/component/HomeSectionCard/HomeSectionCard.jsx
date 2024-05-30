@@ -1,16 +1,6 @@
 import React from "react";
-// import { CardData } from "../../../constant";
-import { shirt1 } from "../../../assests";
-// import AliceCarousel from "react-alice-carousel";
 
-const HomeSectionCard = () => {
-  //   const items = CardData.map((item) => (
-  //   <div key={item.imageId}>
-  //     <img src={item.image} alt="" />
-  //   </div>
-  // ));
-  // console.log(items)
-
+const HomeSectionCard = ({ product }) => {
   return (
     <div
       className="flex flex-col bg-white cursor-pointer items-center 
@@ -19,15 +9,17 @@ const HomeSectionCard = () => {
       <div className="h-[13rem] w-[10rem] ">
         <img
           className="object-cover object-top w-full h-full"
-          src={shirt1}
+          src={product.imageUrl}
           alt=""
         />
       </div>
 
-      <div className="pt-5">
-        <h3 className="text-lg font-medium text-grey-900 text-left" >SLIM FIT SHIRTS</h3>
+      <div className="p-4">
+        <h3 className="text-lg font-medium text-grey-900 text-left">
+          {product.brand}
+        </h3>
         <p className="text-sm font-medium text-grey-500 mt-2">
-          Men Solid pure cotton shirt
+          {product.title}
         </p>
       </div>
     </div>

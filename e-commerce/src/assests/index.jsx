@@ -5,6 +5,9 @@ import banner4 from './banner-4.jpg';
 import banner5 from './banner-5.jpg';
 import shirt1 from './shirt1.jpg';
 import shirt2 from './shirt2.jpg';
+import instagram from './instagram.svg';
+import twitter from './twitter.svg';
+import linkedin from './linkedin.svg';
 
 export {
         banner1,
@@ -13,5 +16,8 @@ export {
         banner4,
         banner5,
         shirt1,
-        shirt2
+        shirt2,
+        instagram,
+        twitter,
+        linkedin
 };
