@@ -1,43 +1,56 @@
+import styles from "../../style";
+import { logo } from "../../../assests";
 import React from "react";
-import { Button, Grid, Typography } from "@mui/material";
-import { socialMedia } from "../../../constant";
+// import { Button, Grid, Typography } from "@mui/material";
+import { footerLinks, socialMedia } from "../../../constant";
+// ${'w-[1000px]' ? 'p-[30px]' : 'p-[0px]' }
 
-const Footer = () => {
-  return (
-    <div>
-      <Grid
-        className="bg-black text-white text-center mt-10"
-        container
-        sx={{ bgcolor: "black", color: "white", py: 3 }}
+const Footer = () => (
+  <section className={`bg-discount-gradient ${styles.flexCenter} ${styles.paddingY} flex-col p-[15px] `}>
+    <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full `}>
+      <div className="justify-start flex flex-col flex-1 mr-10">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[266px] h-[72px] object-contain"
+        />
+        <p className={`${styles.paragraph} mt-4 max-w-[310px] text-white`}>
+          {" "}
+          New way to purchase your Desired  Cloths .{" "}
+        </p>
+      </div>
+      <div
+        className={`flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-10 mt-10  text-left`}
       >
-        <Grid item xs={12} sm={6} md={3}>
-          {socialMedia.map((social, index) => (
-            <div>
-            <img key={social.id} src={social.icon} alt="social" className= {`flex flex-1 ${index !== socialMedia.length-1 ? 'mr-6' : 'mr-0' } w-[21px] h-[21px] object-contain cursor-pointer `}  />
-
-            </div>
+        {footerLinks.map((footer) => (
+          <div
+            key={footer.key}
+            className="flex flex-col ss:my-0 my-4 min-w-[150px] text-white "
+          >
+            <h4 className="font-poppins font-large font-bold text-[26px] leading-[27px] text-white " > {footer.title} </h4>
+            <ul className="list-none mt-4 " >
+              {footer.links.map((link , index) => (
+                <li  className={` ${index !== footer.links.length - 1  ? 'mb-4' : 'mb-0'}  font-poppins font-normal text-dimWhite text-[16px] hover:text-secondary cursor-pointer`} key={link.name} >{link.name}</li>
+              ))}
+            </ul>
+  
+          </div>
         ))}
-
-          <Typography className="pb-5" variant="h6">
-            Company
-          </Typography>
-          <Button className="pb-5 text-black" variant="h6" gutterBottom>
-            About
-          </Button>
-          <Button className="pb-5 text-black" variant="h6" gutterBottom>
-            About
-          </Button>
-          <Button className="pb-5 text-black" variant="h6" gutterBottom>
-            About
-          </Button>
-          <Button className="pb-5 text-black" variant="h6" gutterBottom>
-            About
-          </Button>
-        </Grid>
-      </Grid>
-      Footer
+      </div>
     </div>
-  );
-};
+
+    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3f3r45] " >
+      <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white" >
+          2024 HooBank. All Rights Reserved.
+      </p>
+
+      <div className={`flex flex-row md:mt-0 mt-6`}>
+        {socialMedia.map((social, index) => (
+            <img key={social.id} src={social.icon} alt="social" className= {`flex flex-1 ${index !== socialMedia.length-1 ? 'mr-6' : 'mr-0' } w-[21px] h-[21px] object-contain cursor-pointer `}  />
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Footer;
