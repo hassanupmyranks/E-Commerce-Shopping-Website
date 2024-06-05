@@ -1,12 +1,15 @@
 import './App.css';
 import {  Navigation } from './customer/component';
-import HomePage from './pages/HomePage/HomePage';
+import Product from './customer/component/Product/Product';
+// import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <HomePage />
+      {/* <HomePage /> */}
+      <Product />
+
     </div>
   );
 }
